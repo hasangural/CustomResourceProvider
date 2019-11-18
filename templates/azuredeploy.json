@@ -21,7 +21,8 @@
           "metadata": {
             "description": "The Uri to the uploaded function zip file"
           },
-          "defaultValue": "https://github.com/HasanGural/CustomResourceProvider/blob/master/SampleFunctions/CSharpSimpleProvider/Artifacts/functionZip/functionpackage.zip?raw=true"
+          "defaultValue": "https://github.com/hasangural/CustomResourceProvider/blob/master/templates/AZ-CustomRFunction.zip?raw=true"
+                          
         }
     },
     "variables": {

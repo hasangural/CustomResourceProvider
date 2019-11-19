@@ -4,7 +4,12 @@
     <img src="http://azuredeploy.net/deploybutton.png"/> 
 </a>
 
-This sample template deploys a Azure Function to Azure and creates basic function for Custom Resource Provider
+This sample template deploys an Azure Function to Azure and creates essential function for Custom Resource Provider. It also creates a System Assigned Identity which is App Registration for using from Azure Function to handle authentication and authorisation process. When deployment is succeeded, you can get System Assigned Identity Id (Principal Id ) from the template output section. 
+
+Let you know that your Azure Function name will be : 
+####  https://{FuncName}.azurewebsites.net/ 
+
+You need to give an access to the Managed Identity which is created by Azure Function ARM template. You can get Principal Id.
 
 
 # Details on the custom resource provider created. 

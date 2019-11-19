@@ -13,7 +13,7 @@ Let you know that your Azure Function name will be :
 
 You need to give an access to the Managed Identity which is created by Azure Function ARM template.
 
-# Requirements for Azure Function - Custom Resource Provide - Endpoint
+# Requirements for Azure Function - Custom Resource Provides
 
 *   Give access to Principal Id for Azure Subscription. At least It has to have Deployment/write permission.
 *   Azure Resource Manager Template will be deployed AZ.Function v2. Do not change it.
@@ -36,7 +36,10 @@ resourceTypes": [
                     }
 ```
 
-# Creating a Container to use Custom Resource Provider.
+# Creating a Container Using Custom Resource Provider.
+
+![Deploy and Use Custom Resource Provider](CRP.GIF)
+
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhasangural%2FCustomResourceProvider%2Fmaster%2Ftemplates%2FcustomContainer.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/> 

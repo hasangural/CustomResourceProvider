@@ -1,0 +1,41 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "containerName": {
+            "type": "string",
+            "defaultValue": "fsocietyTerminal01"
+        }
+    },
+    "resources": [
+        {
+            "apiVersion": "2018-09-01-preview",
+            "type": "Microsoft.CustomProviders/resourceProviders",
+            "name": "customContainerProvider",
+            "location": "eastus",
+            "properties": {
+                "resourceTypes": [
+                    {
+                        "name": "startContainer",
+                        "routingType": "proxy",
+                        "endpoint": "https://customprovider-func.azurewebsites.net/api/{RequestPath}"
+                    }
+                ]
+            }
+        },
+        {
+            "apiVersion": "2018-09-01-preview",
+            "type": "Microsoft.CustomProviders/resourceProviders/startContainer",
+            "name": "customContainerProvider/startNewContainer",
+            "location": "eastus",
+            "dependsOn": [
+                "[resourceId('Microsoft.CustomProviders/resourceProviders/', 'customContainerProvider')]"
+            ],
+            "properties": {
+                "ContainerName": "[parameters('containerName')]"
+            }
+        }
+    ],
+    "outputs": {
+    }
+}

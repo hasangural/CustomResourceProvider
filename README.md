@@ -38,10 +38,10 @@ resourceTypes": [
 
 # Creating a Container Using Custom Resource Provider.
 
-![Deploy and Use Custom Resource Provider](CRP.GIF)
+![Deploy and Use Custom Resource Provider](.\templates\images\CRP.GIF)
 
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhasangural%2FCustomResourceProvider%2Fmaster%2Ftemplates%2FcustomContainer.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhasangural%2FCustomResourceProvider%2Fmaster%2Ftemplates%2FcustomContanier.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/> 
 </a>
 
